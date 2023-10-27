@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('comment', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('post_id');
-            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
-            $table->string('author');
-            $table->text('content');
+            $table->string('nama', 100)->nullable(false);
+            $table->string('email', 50)->nullable(false);
+            $table->string('judul', 50)->nullable(false);            
+            $table->string('author')->nullable(false);
+            $table->enum('gender', ['male','female'])->default('male');
+            $table->string('description', 100)->nullable(false);
             $table->timestamps();
         });
     }

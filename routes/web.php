@@ -55,8 +55,37 @@ $router->get('/item', 'ItemController@index');
 $router->get('/item/getAllItem', 'ItemController@getAllItem');
 $router->get('/item/getAllItem/{userId}', 'ItemController@getItemById');
 
-$router->get('posts', 'PostsController@index');
+//posts
+$router->get('/posts', 'PostsController@index');
+$router->get('/posts/{id}', 'PostsController@show');
+$router->post('/posts', 'PostsController@store');
+$router->put('/posts/{id}', 'PostsController@update');
+$router->delete('/posts/{id}', 'PostsController@destroy');
+
+//users
 $router->get('/users', 'UsersController@index');
+$router->get('/users/{user_id}', 'UsersController@show');
+$router->post('/users', 'UsersController@store');
+$router->put('/users/{id}', 'UsersController@update');
+$router->delete('/users/{id}', 'UsersController@destroy');
+
+//product
 $router->get('/product', 'ProductController@index');
+$router->get('/product/{id}', 'ProductController@show');
+$router->post('/product', 'ProductController@store');
+$router->put('/product/{id}', 'ProductController@update');
+$router->delete('/product/{id}', 'ProductController@destroy');
+
+//category
 $router->get('/category', 'CategoryController@index');
+$router->get('/category/{id}', 'CategoryController@show');
+$router->post('/category', 'CategoryController@store');
+$router->put('/category/{id}', 'CategoryController@update');
+$router->delete('/category/{id}', 'CategoryController@destroy');
+
+//comment
 $router->get('/comment', 'CommentController@index');
+$router->get('/comment/{id}', 'CommentController@show');
+$router->post('/comment', 'CommentController@store');
+$router->put('/comment/{id}', 'CommentController@update');
+$router->delete('/comment/{id}', 'CommentController@destroy');

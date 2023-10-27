@@ -12,5 +12,5 @@ class Category extends Model
 
     //define cloumn name
     protected $table = 'category';
-    protected $fillable = array('id','name', 'description',);
+    protected $fillable = array('id','name', 'email', 'judul', 'status','description',);
 }

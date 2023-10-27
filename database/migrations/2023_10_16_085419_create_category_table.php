@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('category', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email');
+            $table->string('judul');
+            $table->enum('status', array('draft','published'))->default('draft');
             $table->string('description')->nullable();
             $table->timestamps();
         });

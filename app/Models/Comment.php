@@ -12,5 +12,5 @@ class Comment extends Model
 
     //define cloumn name
     protected $table = 'comment';
-    protected $fillable = array('id', 'post_id', 'author', 'content',);
+    protected $fillable = array('id', 'nama', 'email', 'judul', 'author', 'gender','description',);
 }

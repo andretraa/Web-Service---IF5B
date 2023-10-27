@@ -11,5 +11,7 @@ class Product extends Model
     // protected $table='table_name'
 
     //define cloumn name
-    protected $fillable = array('id', 'name', 'price',);
+    protected $fillable = array('id', 'name', 'price','nama_produk','jenis_produk');
+
+    public $timestamps = true;
 }
